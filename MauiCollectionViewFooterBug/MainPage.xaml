@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiCollectionViewFooterBug"
+    x:Class="MauiCollectionViewFooterBug.MainPage"
+    x:DataType="local:MainPage">
+
+    <CollectionView ItemsSource="{Binding Items}">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.Header>
+            <Button
+                HorizontalOptions="Center"
+                Margin="12,24"
+                Text="Break Footer"
+                Clicked="BreakFooter" />
+        </CollectionView.Header>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:ListItem">
+                <Label Text="{Binding Identifier}" Margin="12,0" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+        <CollectionView.Footer>
+            <Label
+                Text="Footer"
+                HorizontalOptions="Center"
+                Margin="12,24" />
+        </CollectionView.Footer>
+    </CollectionView>
+
+</ContentPage>
