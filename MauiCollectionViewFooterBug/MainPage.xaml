@@ -7,16 +7,12 @@
     x:DataType="local:MainPage">
 
     <CollectionView ItemsSource="{Binding Items}">
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
-        </CollectionView.ItemsLayout>
-
         <CollectionView.Header>
             <Button
                 HorizontalOptions="Center"
                 Margin="12,24"
-                Text="Break Footer"
-                Clicked="BreakFooter" />
+                Text="Add Item"
+                Clicked="AddItem" />
         </CollectionView.Header>
 
         <CollectionView.ItemTemplate>
